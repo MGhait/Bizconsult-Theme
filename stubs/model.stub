@@ -1,0 +1,93 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class {{ class }} extends Model
+{
+    use HasFactory;
+
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = '';
+
+    /**
+     * The primary key associated with the table
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
+    
+    /**
+     * The datatype of the auto-incrementing ID
+     *
+     * @var string
+     */
+    protected $keyType = 'integer';
+
+    
+    /**
+     * Indecates if the model's ID is auto-incrementing
+     *
+     * @var bool
+     */
+    protected $incrementing = true;
+    
+
+    /**
+     * Indecates if the model should be timestamped
+     *
+     * @var bool
+     */
+    protected $timestamps = true;
+
+    
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = ['id'];
+    
+
+    /**
+     * The attributes that should be cast
+     *
+     * @var array
+     */
+    protected $casts = [
+        // 'status' => Status::class,
+    ];
+
+    /**
+     * Upload Path
+     */
+    const UPLOADPATH = 'images/';
+
+    /**
+     * fields that will handle upload document
+     */
+    const UPLOADFIELDS = [];
+
+    ##--------------------------------- RELATIONSHIPS
+
+
+    ##--------------------------------- ATTRIBUTES
+
+
+    ##--------------------------------- CUSTOM FUNCTIONS
+    
+    
+    ##--------------------------------- SCOPES
+
+
+    ##--------------------------------- ACCESSORS & MUTATORS
+
+}
