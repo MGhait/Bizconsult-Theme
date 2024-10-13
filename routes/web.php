@@ -23,8 +23,9 @@ Route::name('front.')->group(function(){
 
 // there is a problem naming the route with admin
 Route::name('admin.')->prefix('myAdmin')->group(function(){
-    Route::view('/','admin.index')->name('index');
-    Route::view('/login','admin.auth.login')->name('login');
+    Route::view('/','admin.index')->name('index')->middleware('auth');
+    // Route::view('/login','admin.auth.login')->name('login');
+    require __DIR__.'/auth.php';
 });
 
 
@@ -39,4 +40,3 @@ Route::name('admin.')->prefix('myAdmin')->group(function(){
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-// require __DIR__.'/auth.php';
