@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,12 @@ Route::name('front.')->group(function(){
 });
 
 // there is a problem naming the route with admin
-Route::name('admin.')->prefix('myAdmin')->group(function(){
-    Route::view('/','admin.index')->name('index')->middleware('auth');
-    // Route::view('/login','admin.auth.login')->name('login');
+Route::name('admin.')->prefix(LaravelLocalization::setLocale() .'/myAdmin')->middleware('localeSessionRedirect', 'localizationRedirect', 'localeViewPath')->group(function(){
+
+    Route::middleware('auth')->group(function(){
+        Route::view('/','admin.index')->name('index');
+    });
+    
     require __DIR__.'/auth.php';
 });
 

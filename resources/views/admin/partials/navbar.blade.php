@@ -7,6 +7,9 @@
     </form>
     <ul class="nav">
       <li class="nav-item">
+        @include('admin.partials.language')
+      </li>
+      <li class="nav-item">
         <a class="nav-link text-muted my-2" href="#" id="modeSwitcher" data-mode="light">
           <i class="fe fe-sun fe-16"></i>
         </a>
@@ -34,7 +37,7 @@
           <a class="dropdown-item" href="#">Activities</a>
           <form method="POST" action="{{ route('admin.logout') }}">
             @csrf
-            <button class="dropdown-item text-danger" > Logout</button>
+            <button class="dropdown-item text-danger" > {{ __('keywords.logout') }}</button>
           </form>
         </div>
       </li>
