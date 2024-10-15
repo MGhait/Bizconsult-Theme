@@ -11,5 +11,13 @@
       </main> <!-- main -->
     </div> <!-- .wrapper -->
     @include('admin.partials.scripts')
+    <script>
+      function confirmDelete(id) {
+          if(confirm('Are You Sure You Want to Delete This Record? \n It Will Be Deleted Permanently!')){
+              // alert('confimred');
+              document.getElementById('form-delete-' + id).submit();
+          }
+      }
+    </script>
   </body>
 </html>

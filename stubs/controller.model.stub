@@ -13,7 +13,8 @@ class {{ class }} extends Controller
      */
     public function index()
     {
-        //
+        ${{ modelVariable }} = {{ model }}::paginate(config('pagination.count'));
+        return view('admin.services.index',get_defined_vars()); 
     }
 
     /**
@@ -21,7 +22,8 @@ class {{ class }} extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.services.create',get_defined_vars()); 
+
     }
 
     /**
@@ -29,7 +31,10 @@ class {{ class }} extends Controller
      */
     public function store({{ storeRequest }} $request)
     {
-        //
+        $data = $request->validated();
+
+        {{ model }}::create($data);
+        return to_route('admin.services.index')->with('success', __('keywords.create_success'));
     }
 
     /**
@@ -37,7 +42,8 @@ class {{ class }} extends Controller
      */
     public function show({{ model }} ${{ modelVariable }})
     {
-        //
+        return view('admin.services.show',get_defined_vars()); 
+
     }
 
     /**
@@ -45,7 +51,7 @@ class {{ class }} extends Controller
      */
     public function edit({{ model }} ${{ modelVariable }})
     {
-        //
+        return view('admin.services.edit', get_defined_vars());
     }
 
     /**
@@ -53,7 +59,9 @@ class {{ class }} extends Controller
      */
     public function update({{ updateRequest }} $request, {{ model }} ${{ modelVariable }})
     {
-        //
+        $data = $request->validated();
+        ${{ modelVariable }}->update($data);
+        return to_route('admin.services.index')->with('success', __('keywords.update_success'));
     }
 
     /**
@@ -61,6 +69,7 @@ class {{ class }} extends Controller
      */
     public function destroy({{ model }} ${{ modelVariable }})
     {
-        //
+        ${{ modelVariable }}->delete();
+        return to_route('admin.services.index')->with('success', __('keywords.delete_success'));
     }
 }

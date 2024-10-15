@@ -12,29 +12,23 @@
                 <form method="POST" action="{{ route('admin.services.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6">
-                            <label for="simpleinput">{{ __('keywords.title') }}</label>
+                        <div class="col-md-6">                    
+                          <x-form-label field="title"></x-form-label>
                             <input type="text" id="simpleinput" name="title" class="form-control" placeholder="{{ __('keywords.title') }}" value="{{ old('title') }}">
-                            @error('title')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
+                            <x-validation-error field="title"></x-validation-error>
+                          </div>
                         <div class="col-md-6">
-                            <label for="simpleinput">{{ __('keywords.icon') }}</label>
-                            <input type="text" id="simpleinput" class="form-control" name="icon" placeholder="{{ __('keywords.icon') }}" value="{{ old('icon') }}">
-                            @error('icon')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
+                          <x-form-label field="icon"></x-form-label>
+                          <input type="text" id="simpleinput" class="form-control" name="icon" placeholder="{{ __('keywords.icon') }}" value="{{ old('icon') }}">
+                            <x-validation-error field="icon"></x-validation-error>
                         </div>
                         <div class="col-md-12 mt-3">
-                            <label for="simpleinput">{{ __('keywords.description') }}</label>
+                          <x-form-label field="description"></x-form-label>
                             <textarea id="simpleinput" class="form-control" name="description" placeholder="{{ __('keywords.description') }}">{{ old('description') }}</textarea>
-                            @error('description')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
+                            <x-validation-error field="description"></x-validation-error>
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-primary btn-sm mt-3">{{ __('keywords.submit') }}</button>
+                      <x-submit-button></x-submit-button>
                 </form>
               </div>
             </div>

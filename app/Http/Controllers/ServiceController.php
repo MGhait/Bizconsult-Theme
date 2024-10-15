@@ -13,7 +13,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::paginate(10);
+        $services = Service::paginate(config('pagination.count'));
 
         // insted of using compact if we have many variables to sent
         return view('admin.services.index',get_defined_vars()); 
