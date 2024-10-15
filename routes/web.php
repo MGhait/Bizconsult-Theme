@@ -1,12 +1,11 @@
 <?php
 
-use App\Models\Feature;
-use App\Models\Message;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SubscriberController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 //  ============= FRONT ROUTES ===============
@@ -36,6 +35,10 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale() .'/myAdmin')->mid
     // =============  MESSAGES ==============
     Route::controller(MessageController::class)->group(function (){
         Route::resource('messages', MessageController::class)->only(['index', 'show', 'destroy']);
+    });
+    // =============  SUBSCRIBERS ==============
+    Route::controller(SubscriberController::class)->group(function (){
+        Route::resource('subscribers', SubscriberController::class)->only(['index','destroy']);
     });
     
     require __DIR__.'/auth.php';

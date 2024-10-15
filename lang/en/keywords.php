@@ -27,6 +27,7 @@ return [
     'create_success' => 'Your Record Has Been Created Successfully',
     'update_success' => 'Your Record Has Been Updated Successfully',
     'delete_success' => 'Your Record Has Been Deleted Successfully',
+    'email' => 'Email',
 
     // Service Module
     'services' => 'Services',
@@ -51,8 +52,10 @@ return [
     'messages' => 'Messages',
     'show_message' => 'Show Message',
     'name' => 'Name',
-    'email' => 'Email',
     'subject' => 'Subject',
     'message' => 'Message',
-
+    
+    // Subscriber Module
+    'subscribers' => 'Subscribers',
+    'time' => 'Sent At',
 ];
