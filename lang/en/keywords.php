@@ -58,4 +58,12 @@ return [
     // Subscriber Module
     'subscribers' => 'Subscribers',
     'time' => 'Sent At',
+    
+    // Testmonial Module
+    'testmonials' => 'Testmonials',
+    'position' => 'Position',
+    'image' => 'Image',
+    'show_testmonial' => 'Show Testmonial',
+    'update_testmonial' => 'Update Testmonial',
+    'edit_testmonial' => 'Edit Testmonial',
 ];
