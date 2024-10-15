@@ -33,6 +33,8 @@
         <x-sidebar-tab href="{{ route('admin.services.index') }}" icon="fe-codesandbox" name="{{ __('keywords.services') }}"></x-sidebar-tab>
         {{-- Features --}}
         <x-sidebar-tab href="{{ route('admin.features.index') }}" icon="fe-bookmark" name="{{ __('keywords.features') }}"></x-sidebar-tab>
+        {{-- Messages --}}
+        <x-sidebar-tab href="{{ route('admin.messages.index') }}" icon="fe-message-square" name="{{ __('keywords.messages') }}"></x-sidebar-tab>
       </ul>
     </nav>
   </aside>

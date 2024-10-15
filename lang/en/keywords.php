@@ -45,4 +45,14 @@ return [
     'show_feature' => 'Show Feature',
     'update_feature' => 'Update Feature',
     'edit_feature' => 'Edit Feature',
+    
+    
+    // Messages Module
+    'messages' => 'Messages',
+    'show_message' => 'Show Message',
+    'name' => 'Name',
+    'email' => 'Email',
+    'subject' => 'Subject',
+    'message' => 'Message',
+
 ];
