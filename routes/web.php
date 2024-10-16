@@ -17,6 +17,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 Route::name('front.')->controller(FrontController::class)->group(function(){
     // ============= HOME PAGE ==============
     Route::get('/','index')->name('index');
+    Route::post('/subscriber/store', 'subscriberStore' )->name('subscriber.store');
     
     // ============= ABOUT PAGE ==============
     Route::get('/about','about')->name('about');
