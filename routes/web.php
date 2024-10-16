@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\MessageController;
@@ -41,9 +42,15 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale() .'/myAdmin')->mid
     Route::controller(SubscriberController::class)->group(function (){
         Route::resource('subscribers', SubscriberController::class)->only(['index','destroy']);
     });
+    
     // =============  TESTMONIALS ==============
     Route::controller(TestmonialController::class)->group(function (){
         Route::resource('testmonials', TestmonialController::class);
+    });
+    
+    // =============  COMPANIES ==============
+    Route::controller(CompanyController::class)->group(function (){
+        Route::resource('companies', CompanyController::class)->except(['show']);
     });
     
     require __DIR__.'/auth.php';

@@ -28,6 +28,8 @@ return [
     'update_success' => 'Your Record Has Been Updated Successfully',
     'delete_success' => 'Your Record Has Been Deleted Successfully',
     'email' => 'Email',
+    'image' => 'Image',
+    'old_image' => 'Old Image',
 
     // Service Module
     'services' => 'Services',
@@ -62,8 +64,15 @@ return [
     // Testmonial Module
     'testmonials' => 'Testmonials',
     'position' => 'Position',
-    'image' => 'Image',
     'show_testmonial' => 'Show Testmonial',
     'update_testmonial' => 'Update Testmonial',
     'edit_testmonial' => 'Edit Testmonial',
+    
+    // Companies Module
+    'companies' => 'Companies',
+    'show_company' => 'Show Company',
+    'update_company' => 'Update Company',
+    'edit_company' => 'Edit Company',
+    'add_new_company' => 'Add New Company',
 ];
+
