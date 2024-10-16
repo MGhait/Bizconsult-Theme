@@ -30,7 +30,8 @@ return [
     'email' => 'Email',
     'image' => 'Image',
     'old_image' => 'Old Image',
-
+    'position' => 'Position',
+    
     // Service Module
     'services' => 'Services',
     'title' => 'Title',
@@ -63,7 +64,6 @@ return [
     
     // Testmonial Module
     'testmonials' => 'Testmonials',
-    'position' => 'Position',
     'show_testmonial' => 'Show Testmonial',
     'update_testmonial' => 'Update Testmonial',
     'edit_testmonial' => 'Edit Testmonial',
@@ -74,5 +74,17 @@ return [
     'update_company' => 'Update Company',
     'edit_company' => 'Edit Company',
     'add_new_company' => 'Add New Company',
+    
+    // Members Module
+    'members' => 'Members',
+    'show_member' => 'Show Member',
+    'add_new_member' => 'Add New Member',
+    'update_member' => 'Update Member',
+    'edit_member' => 'Edit Member',
+    'facebook' => 'Facebook',
+    'twitter' => 'Twitter',
+    'linkedin' => 'Linkedin',
+    
+    
 ];
 
