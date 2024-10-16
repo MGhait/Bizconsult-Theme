@@ -3,9 +3,9 @@
 return [
     'index' => 'Index',
     'dashboard' => 'Dashboard',
+    'welcome' => 'Welcome',
     'signIn' => 'Sign in',
     'emailAddress' => 'Email Address',
-    'welcome' => 'Welcome',
     'password' => 'Password',
     'login' => 'Login',
     'logout' => 'Logout',
