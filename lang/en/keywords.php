@@ -31,6 +31,9 @@ return [
     'image' => 'Image',
     'old_image' => 'Old Image',
     'position' => 'Position',
+    'facebook' => 'Facebook',
+    'linkedin' => 'Linkedin',
+    'twitter' => 'Twitter',
     
     // Service Module
     'services' => 'Services',
@@ -81,10 +84,13 @@ return [
     'add_new_member' => 'Add New Member',
     'update_member' => 'Update Member',
     'edit_member' => 'Edit Member',
-    'facebook' => 'Facebook',
-    'twitter' => 'Twitter',
-    'linkedin' => 'Linkedin',
     
+    // Settings Module
+    'settings' => 'Settings',
+    'address' => 'Address',
+    'phone' => 'Phone',
+    'youtube' => 'Youtube',
+    'instagram' => 'Instagram',
     
 ];
 
