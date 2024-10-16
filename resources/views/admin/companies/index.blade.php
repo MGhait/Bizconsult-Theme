@@ -28,7 +28,7 @@
                         @foreach ($companies as $key => $company )
                             <tr>
                                 <td>{{ $companies->firstItem() + $loop->index }}</td>
-                                <th> <img src="{{ asset("storage/companies/$company->image") }}" width="300px"></th>
+                                <th> <img src="{{ asset("storage/companies/$company->image") }}" width="7w0px"></th>
                                 <td>
                                     <x-action-button href="{{ route('admin.companies.edit',['company' => $company]) }}" type="edit"></x-action-button>
                                     

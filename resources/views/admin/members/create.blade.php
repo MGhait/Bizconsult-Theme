@@ -29,17 +29,17 @@
                         </div>
                         <div class="col-md-4 mt-3">
                           <x-form-label field="facebook"></x-form-label>
-                            <input id="simpleinput" class="form-control" name="facebook" placeholder="{{ __('keywords.facebook') }}" value="{{ old('facebook') }}">
+                            <input type="url" id="simpleinput" class="form-control" name="facebook" placeholder="{{ __('keywords.facebook') }}" value="{{ old('facebook') }}">
                             <x-validation-error field="facebook"></x-validation-error>
                         </div>
                         <div class="col-md-4 mt-3">
                           <x-form-label field="twitter"></x-form-label>
-                            <input id="simpleinput" class="form-control" name="twitter" placeholder="{{ __('keywords.twitter') }}" value="{{ old('twitter') }}">
+                            <input type="url" id="simpleinput" class="form-control" name="twitter" placeholder="{{ __('keywords.twitter') }}" value="{{ old('twitter') }}">
                             <x-validation-error field="twitter"></x-validation-error>
                         </div>
                         <div class="col-md-4 mt-3">
                           <x-form-label field="linkedin"></x-form-label>
-                            <input id="simpleinput" class="form-control" name="linkedin" placeholder="{{ __('keywords.linkedin') }}" value="{{ old('linkedin') }}">
+                            <input type="url" id="simpleinput" class="form-control" name="linkedin" placeholder="{{ __('keywords.linkedin') }}" value="{{ old('linkedin') }}">
                             <x-validation-error field="linkedin"></x-validation-error>
                         </div>
                       </div>
