@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreMessageRequest;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreSubscriberRequest;
+use App\Models\Message;
 
 class FrontController extends Controller
 {
@@ -35,6 +37,13 @@ class FrontController extends Controller
         $data = $request->validated();
         Subscriber::create($data);
         return back()->with('subscriber_success', 'Subscribed Successfully');
+    }
+    
+    public function contactStore(StoreMessageRequest $request)
+    {
+        $data = $request->validated();
+         Message::create($data);
+        return back()->with('message_success', 'Your Message Has Been Sent Successfully');
     }
     
     
