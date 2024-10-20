@@ -92,6 +92,20 @@ return [
     'phone' => 'رقم الهاتف',
     'youtube' => 'قناة اليوتيوب',
     'instagram' => 'صفحة الانستجرام',
+
+        // About Module
+        'abouts' => 'نبذة تعريفية',
+        'add_new_about' => 'نبذة تعريفية جديدة',
+        'show_about' => 'عرض النبذة التعريفية',
+        'update_about' => 'تحديث النبذة التعريفية',
+        'edit_about' => 'تحديث النبذة التعريفية',
+        
+        // artical Module
+        'artical_settings' => 'اعدادات المقالات',
+        'hero_artical' => 'المقالة الرئيسية',
+        'about_artical' => 'مقالة النبذة التعريفية',
+        'feature_artical' => 'مقالة المميزات',
+        'articals' => 'اعدادات المقالات',
     
 
 ];

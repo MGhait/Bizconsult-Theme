@@ -34,6 +34,9 @@
         
         {{-- Features --}}
         <x-sidebar-tab href="{{ route('admin.features.index') }}" icon="fe-bookmark" name="{{ __('keywords.features') }}"></x-sidebar-tab>
+
+        {{-- About --}}
+        <x-sidebar-tab href="{{ route('admin.abouts.index') }}" icon="fe-package" name="{{ __('keywords.abouts') }}"></x-sidebar-tab>
         
         {{-- Messages --}}
         <x-sidebar-tab href="{{ route('admin.messages.index') }}" icon="fe-message-square" name="{{ __('keywords.messages') }}"></x-sidebar-tab>
@@ -49,6 +52,9 @@
         
         {{-- Members --}}
         <x-sidebar-tab href="{{ route('admin.members.index') }}" icon="fe-user" name="{{ __('keywords.members') }}"></x-sidebar-tab>
+        
+        {{-- articals --}}
+        <x-sidebar-tab href="{{ route('admin.articals.index') }}" icon="fe-settings" name="{{ __('keywords.artical_settings') }}"></x-sidebar-tab>
         
         {{-- Settings --}}
         <x-sidebar-tab href="{{ route('admin.settings.index') }}" icon="fe-settings" name="{{ __('keywords.settings') }}"></x-sidebar-tab>

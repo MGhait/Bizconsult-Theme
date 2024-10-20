@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticalController;
 use App\Http\Controllers\CompanyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FeatureController;
@@ -11,6 +13,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\TestmonialController;
+use Illuminate\Foundation\Console\AboutCommand;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 //  ============= FRONT ROUTES ===============
@@ -73,6 +76,16 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale() .'/myAdmin')->mid
     // =============  SETTINGS ==============
     Route::controller(SettingController::class)->group(function (){
         Route::resource('settings', SettingController::class)->only(['index', 'update']);
+    });
+    
+    // =============  ARTICALS ==============
+    Route::controller(ArticalController::class)->group(function (){
+        Route::resource('articals', ArticalController::class)->only(['index', 'update']);
+    });
+
+    // =============  ABOUT ==============
+    Route::controller(AboutController::class)->group(function (){
+        Route::resource('abouts', AboutController::class);
     });
     
     require __DIR__.'/auth.php';

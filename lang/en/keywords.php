@@ -86,11 +86,27 @@ return [
     'edit_member' => 'Edit Member',
     
     // Settings Module
-    'settings' => 'Settings',
+    'settings' => 'General Settings',
     'address' => 'Address',
     'phone' => 'Phone',
     'youtube' => 'Youtube',
     'instagram' => 'Instagram',
     
+    'footer_settings' => 'Footer Settings',
+    
+    // About Module
+    'abouts' => 'About',
+    'add_new_about' => 'Add New About',
+    'show_about' => 'Show About',
+    'update_about' => 'Update About',
+    'edit_about' => 'Edit About',
+    
+    // artical Module
+    'artical_settings' => 'Artical Settings',
+    'hero_artical' => 'Hero Artical',
+    'about_artical' => 'About Artical',
+    'feature_artical' => 'Feature Artical',
+    'articals' => 'Artical Settings',
+
 ];
 
