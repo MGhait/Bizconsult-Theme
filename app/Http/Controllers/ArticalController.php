@@ -27,13 +27,14 @@ class ArticalController extends Controller
      */
     public function update(UpdateArticalRequest $request, Artical $artical)
     {
+        // update it to match my condition
         $data = $request->validated();
         if($request->hasFile('image')){
-            Storage::delete("public/images/$artical->image");
+            Storage::delete("public/$artical->image");
             $image = $request->image;
             $newImageName = time() . '-' . $image->getClientOriginalName();
-            $image->storeAs('members', $newImageName, 'public');
-            $data['image'] = $newImageName;
+            $image->storeAs('images', $newImageName, 'public');
+            $data['image'] = 'images/' . $newImageName;
         }
         $artical->update($data);
         return to_route('admin.articals.index')->with('success', __('keywords.update_success'))->with('id', $artical->id);
